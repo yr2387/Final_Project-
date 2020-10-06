@@ -9,5 +9,8 @@ class Squirrel(models.Model):
     Date = models.DateField(
         help_text = _('Date')
     )
+    
+    def __str__(self):
+        return self.Squirrel_ID
 
 # Create your models here.
