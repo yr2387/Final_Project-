@@ -50,10 +50,15 @@
         <!-- L.Icon.Default.prototype.options.iconAnchor = [0, 0]; -->
         <!-- L.Icon.Default.prototype.options.shadowSize = 15; -->
         <!-- L.Icon.Default.prototype.options.shadowAnchor = [0, 0]; -->
-
         {% for sighting in squirrel_map %}
           var point_lat_lon = [{{ sighting.latitude }}, {{ sighting.longitude }}];
-          var marker = L.marker(point_lat_lon).addTo(map);
+	  var marker_text = "Longitude: {{sighting.longitude}} <br>Latitude: {{sighting.latitude}} <br>Unique squirrel ID: {{sighting.unique_squirrel_id}}<br><a href='/sightings/{{sighting.unique_squirrel_id}}'>Link to Squirrel</a>"
+          var marker = L.marker(point_lat_lon).addTo(map)
+	    .bindPopup(marker_text);
+	  if (first == true) {
+                first = false;
+                marker.openPopup();
+	  }
         {% endfor %}
     </script>
   </body>
