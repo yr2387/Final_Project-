@@ -6,4 +6,6 @@ app_name = 'map'
 
 urlpatterns = [
         path('', views.map, name='map')
-]
+] 
+
+

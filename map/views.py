@@ -5,4 +5,3 @@ def map(request):
     squirrelmap = Squirrel.objects.all()
     return render(request, 'map/map.html', {"squirrelmap":squirrelmap})
 
-
