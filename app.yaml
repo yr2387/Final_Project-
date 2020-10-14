@@ -8,3 +8,13 @@ handlers:
 
      - url: /.*
        script: auto
+
+env_variables:
+    DEBUG: 'true'
+    INSTANCE_CONNECTION_NAME: 'tfa-2020-fall-zh2447:us-east4:track' 
+    PGDATABASE: 'postgres'
+    PGUSER: 'postgres'
+    PGPASSWORD: 'zuItes2xrLaNowzz'
+    SECRET_KEY: '!b!*!yvz!z30n8jx=6$nf4fe=wnhrp#kyy4(0bvd4i84(g_!5t'
+    GS_BUCKET_NAME: 'tfa-2020-fall-zh2447.uk.r.appspot.com'
+    GOOGLE_APPLICATION_CREDENTIALS: 'service-account-key.json'
